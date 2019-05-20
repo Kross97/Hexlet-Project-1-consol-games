@@ -2,9 +2,10 @@
   "name": "project-lvl1-s508",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js", "bin": {
+  "main": "index.js",
+ "bin": {
  "brain-games": "dist/bin/brain-games.js"
-}
+},
 
 
   "scripts": {
