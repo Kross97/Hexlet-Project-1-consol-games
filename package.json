@@ -46,4 +46,4 @@
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "readline-sync": "^1.4.9"
   }
-}.
+}
