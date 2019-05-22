@@ -8,4 +8,15 @@
 
 [![Build Status](https://travis-ci.com/Kross97/project-lvl1-s508.svg?branch=master)](https://travis-ci.com/Kross97/project-lvl1-s508)
 
-<a href="https://asciinema.org/a/14"><img src="https://asciinema.org/a/14.png" width="836"/></a>
+
+## Setup
+
+```sh
+$ make install
+```
+
+## Run start
+
+```sh
+$ make start
+```
