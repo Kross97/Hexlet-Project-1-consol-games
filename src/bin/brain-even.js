@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 
 
 export default (name) => {
+  console.log('=========================================');
   console.log('Answer "yes" if number even otherwise answer "no".');
 
 

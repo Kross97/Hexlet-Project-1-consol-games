@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 
 export default (name) => {
+  console.log('=====================================');
   console.log('What is the result of the expression?');
 
   for (let i=0 ; i<3 ; i++) {
