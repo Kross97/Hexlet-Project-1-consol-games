@@ -11,17 +11,15 @@ export default (name) => {
     console.log(`Question:${num}`);
     const answer = readlineSync.question('Your answer:');
 
-    if (num % 2 == 0 && answer !== 'yes') {
+    if (num % 2 == 0 && answer != 'yes') {
       console.log(`${answer} is wrong answer ;(. Correct answer was 'yes'.`);
       console.log(`Let's try again, ${name}!`);
       break;
-    }
-    else if (num % 2 !=0 && answer !== 'no') {
+    } else if (num % 2 !=0 && answer != 'no') {
       console.log(`${answer} is wrong answer ;(. Correct answer was 'yes'.`);
       console.log(`Let's try again, ${name}!`);
       break;
-    }
-     else {
+    } else {
       console.log('Correct!');
     }
 

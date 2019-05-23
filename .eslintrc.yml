@@ -21,4 +21,7 @@ extends:
 
 rules:
   no-console: 0
+  no-plusplus : 0
+  no-constant-condition : 0
+  space-infix-ops: 0
   linebreak-style: 0

@@ -14,7 +14,6 @@ const name = readlineSync.question('May I have your name?: ');
 welcome(name);
 
 
-let i;
 while (true) {
   console.log('1.Brain-even');
   console.log('2.Brain-calculyator');
@@ -22,33 +21,29 @@ while (true) {
   console.log('4.Brain-progression');
   console.log('5.Brain-prime');
   console.log('9.Exit');
-  const number = readlineSync.question('Enter number game :' );
+  const number = readlineSync.question('Enter number game :');
 
-if (number==1){
-  even(name);
-}
+  if (number == 1) {
+    even(name);
+  }
 
-if (number==2){
-  calc(name);
-}
+  if (number == 2) {
+    calc(name);
+  }
 
-if (number==3){
-  gcd(name);
-}
+  if (number == 3) {
+    gcd(name);
+  }
 
-if (number==4){
-  prog(name);
-}
+  if (number == 4) {
+    prog(name);
+  }
 
-if (number==5){
-  prime(name);
-}
-
-else if (number==9) {
-  console.log('Good bye');
-  console.log('Exit games....');
-  break;
-}
-
-i++;
+  if (number == 5) {
+    prime(name);
+  } else if (number == 9) {
+    console.log('Good bye');
+    console.log('Exit games....');
+    break;
+  }
 }

@@ -5,27 +5,27 @@ export default (name) => {
   console.log('Find the greatest common divisor of given numbers.');
 
 
-  for (let j=0 ; j<3 ; j++) {
+  for (let j = 0; j < 3; j++) {
     const num1 = Math.floor(Math.random() * 100);
     const num2 = Math.floor(Math.random() * 100);
-    let s = 0;
-    for(let i=1 ; i<num2 ; i++){
-      if(num1%i==0 && num2%i==0){
-        s=i;
+    let id = 0;
+    for (let i = 1; i < num2; i++) {
+      if (num1%i == 0 && num2%i == 0) {
+        id=i;
       }
     }
     console.log(`Question:${num1} ${num2} `);
-    console.log(`NUM ${s}`);
+
     const answer = readlineSync.question('Your answer: ');
-    if(answer==s){
+    if (answer == id) {
       console.log('Correct!');
     } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${s}.`);
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${id}.`);
       console.log(`Let's try again, ${name}!`);
       break;
     }
-    if(j==2){
+    if (j == 2) {
       console.log(`Congratulations, ${name}!`);
     }
   }
-}
+};
