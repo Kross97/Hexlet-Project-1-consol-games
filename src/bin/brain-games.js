@@ -5,6 +5,7 @@ import even from './games/brain-even';
 import calc from './games/brain-calc';
 import gcd from './games/brain-gcd';
 import prog from './games/brain-progression';
+import prime from './games/brain-prime';
 
 console.log('===========================');
 console.log('Welcome to the Brain Games!');
@@ -19,6 +20,7 @@ while (true) {
   console.log('2.Brain-calculyator');
   console.log('3.Brain-GCD');
   console.log('4.Brain-progression');
+  console.log('5.Brain-prime');
   console.log('9.Exit');
   const number = readlineSync.question('Enter number game :' );
 
@@ -36,6 +38,10 @@ if (number==3){
 
 if (number==4){
   prog(name);
+}
+
+if (number==5){
+  prime(name);
 }
 
 else if (number==9) {
