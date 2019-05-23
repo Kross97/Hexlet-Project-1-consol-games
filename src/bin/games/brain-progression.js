@@ -14,9 +14,9 @@ export default (name) => {
  const el = Math.floor(Math.random()*10);
  const s = arr[el];
  arr[el]="...";
- for(let i=0 ; i<10 ; i++){
-   console.log(arr[i]);
- }
+
+    console.log(`${arr[0]} ${arr[1]} ${arr[2]} ${arr[3]} ${arr[4]} ${arr[5]} ${arr[6]} ${arr[7]} ${arr[8]} ${arr[9]}`);
+
  const answer = readlineSync.question('Enter answer:');
  if(answer==s){
    console.log('Correct!');

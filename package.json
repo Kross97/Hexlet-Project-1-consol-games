@@ -1,7 +1,7 @@
 {
   "name": "bezh1",
   "version": "1.2.0",
-  "description": "",
+  "description": "Brain-games , отработка матеамтических операций",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
@@ -26,7 +26,13 @@
   "jest": {
     "testEnvironment": "node"
   },
-  "author": "",
+  "keywords": [
+    "brain",
+    "games",
+    "progression"
+  ],
+
+  "author": "Nikita Bezhenar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Kross97/project-lvl1-s508/issues"
