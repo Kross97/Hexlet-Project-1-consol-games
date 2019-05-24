@@ -16,12 +16,12 @@
 ```sh
 $ make start
 ```
-Игра 1 : https://asciinema.org/a/lWp74nPQln1ClKAqLhfrXoBb3
+Brain-even : https://asciinema.org/a/lWp74nPQln1ClKAqLhfrXoBb3
 
-Igra 2 : https://asciinema.org/a/4xcK327AL7dQfKM7jn4CG7gz5
+Brain-calculyator : https://asciinema.org/a/4xcK327AL7dQfKM7jn4CG7gz5
 
-Igra 3 : https://asciinema.org/a/Nm85LiyMfQWL1vCxS1M3aNreC
+Brain-GCD : https://asciinema.org/a/Nm85LiyMfQWL1vCxS1B
 
-Igra 4 :  https://asciinema.org/a/7pJUypEpNHxVsl5VZGDHh5Gdx
+Brain-proggresion:  https://asciinema.org/a/7pJUypEpNHxVsl5VZGDHh5Gdx
 
-Igra 5 : https://asciinema.org/a/iIMaWwEkYFG2DFH1qFamVfXEX
+Brain-prime : https://asciinema.org/a/iIMaWwEkYFG2DFH1qFamVfXEX
