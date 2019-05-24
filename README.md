@@ -10,12 +10,6 @@
 <img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
 
 
-
-## Run start games
-
-```sh
-$ make start
-```
 Brain-even : https://asciinema.org/a/lWp74nPQln1ClKAqLhfrXoBb3
 
 Brain-calculyator : https://asciinema.org/a/4xcK327AL7dQfKM7jn4CG7gz5
