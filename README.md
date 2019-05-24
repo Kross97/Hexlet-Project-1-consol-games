@@ -16,3 +16,12 @@
 ```sh
 $ make start
 ```
+Игра 1 : https://asciinema.org/a/lWp74nPQln1ClKAqLhfrXoBb3
+
+Igra 2 : https://asciinema.org/a/4xcK327AL7dQfKM7jn4CG7gz5
+
+Igra 3 : https://asciinema.org/a/Nm85LiyMfQWL1vCxS1M3aNreC
+
+Igra 4 :  https://asciinema.org/a/7pJUypEpNHxVsl5VZGDHh5Gdx
+
+Igra 5 : https://asciinema.org/a/iIMaWwEkYFG2DFH1qFamVfXEX
