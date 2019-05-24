@@ -20,8 +20,9 @@ Brain-even : https://asciinema.org/a/lWp74nPQln1ClKAqLhfrXoBb3
 
 Brain-calculyator : https://asciinema.org/a/4xcK327AL7dQfKM7jn4CG7gz5
 
-Brain-GCD : https://asciinema.org/a/Nm85LiyMfQWL1vCxS1
+Brain-GCD : https://asciinema.org/a/c391T1sd1ZOQpBcREJalyZ7mS
 
 Brain-proggresion:  https://asciinema.org/a/7pJUypEpNHxVsl5VZGDHh5Gdx
 
-Brain-prime : https://asciinema.org/a/iIMaWwEkYFG2DFH1qFamVfXEX
+Brain-prime :  https://asciinema.org/a/LqGAgctTLFQxBTSooOpGMRXvB
+
