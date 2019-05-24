@@ -11,14 +11,7 @@
 
 
 
-
-## Setup
-
-```sh
-$ make install
-```
-
-## Run start
+## Run start games
 
 ```sh
 $ make start
