@@ -3,29 +3,37 @@ import readlineSync from 'readline-sync';
 
 export default (name) => {
   console.log('What number is missing in the progression?');
-  for (let j = 0; j < 3; j++) {
-    const arr = [];
-    const step = readlineSync.question('Enter step:');
-    let all = 0;
-    for (let i = 0; i<10; i++) {
-      all -= (-step);
-      arr[i]=all;
+
+  const raunds = 3;
+  const arrayLength = 10;
+
+  for (let j = 0; j < raunds; j += 1) {
+    const array = [];
+
+    const stepStr = readlineSync.question('Enter step:');
+    const step = parseInt(stepStr);
+
+    let value = 0;
+    for (let i = 0; i < arrayLength; i += 1) {
+      value += step;
+      array[i] = value;
     }
-    const el = Math.floor(Math.random()*10);
-    const s = arr[el];
-    arr[el]='...';
+    const elementSecret = Math.floor(Math.random() * 10);
+    const answerValue = array[elementSecret];
+    array[elementSecret] = '...';
 
-    console.log(`${arr[0]} ${arr[1]} ${arr[2]} ${arr[3]} ${arr[4]} ${arr[5]} ${arr[6]} ${arr[7]} ${arr[8]} ${arr[9]}`);
+    console.log(`${array[0]} ${array[1]} ${array[2]} ${array[3]} ${array[4]} ${array[5]} ${array[6]} ${array[7]} ${array[8]} ${array[9]}`);
 
-    const answer = readlineSync.question('Enter answer:');
-    if (answer == s) {
+    const answerStr = readlineSync.question('Enter answer:');
+    const answerNumber = parseInt(answerStr);
+    if (answerNumber === answerValue) {
       console.log('Correct!');
     } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${s}.`);
+      console.log(`${answerNumber} is wrong answer ;(. Correct answer was ${answerValue}.`);
       console.log(`Let's try again, ${name}!`);
       break;
     }
-    if (j == 2) {
+    if (j === raunds - 1) {
       console.log(`Congratulations, ${name}!`);
     }
   }

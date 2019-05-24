@@ -3,28 +3,30 @@ import readlineSync from 'readline-sync';
 export default (name) => {
   console.log('==================================================');
   console.log('Find the greatest common divisor of given numbers.');
+  const raunds = 3;
 
-
-  for (let j = 0; j < 3; j++) {
-    const num1 = Math.floor(Math.random() * 100);
-    const num2 = Math.floor(Math.random() * 100);
-    let id = 0;
-    for (let i = 1; i < num2; i++) {
-      if (num1%i == 0 && num2%i == 0) {
-        id=i;
+  for (let j = 0; j < raunds; j += 1) {
+    const number1 = Math.floor(Math.random() * 100);
+    const number2 = Math.floor(Math.random() * 100);
+    let idGcd = 0;
+    for (let i = 1; i < number2; i += 1) {
+      if (number1 % i === 0 && number2 % i === 0) {
+        idGcd = i;
       }
     }
-    console.log(`Question:${num1} ${num2} `);
+    console.log(`Question:${number1} ${number2} `);
 
-    const answer = readlineSync.question('Your answer: ');
-    if (answer == id) {
+    const answerStr = readlineSync.question('Enter answer:');
+    const answerNumber = parseInt(answerStr);
+
+    if (answerNumber === idGcd) {
       console.log('Correct!');
     } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${id}.`);
+      console.log(`${answerNumber} is wrong answer ;(. Correct answer was ${idGcd}.`);
       console.log(`Let's try again, ${name}!`);
       break;
     }
-    if (j == 2) {
+    if (j === raunds - 1) {
       console.log(`Congratulations, ${name}!`);
     }
   }

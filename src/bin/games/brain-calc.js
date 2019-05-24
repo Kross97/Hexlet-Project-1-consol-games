@@ -3,49 +3,60 @@ import readlineSync from 'readline-sync';
 export default (name) => {
   console.log('=====================================');
   console.log('What is the result of the expression?');
+  const raunds = 3;
+  for (let i = 0; i < raunds; i += 1) {
+    const operationRand = Math.floor(Math.random() * 10);
+    const number1 = Math.floor(Math.random() * 10);
+    const number2 = Math.floor(Math.random() * 10);
+    if (operationRand === 1 || operationRand === 4 || operationRand === 7 || operationRand === 10) {
+      const sum = number1 + number2;
+      console.log(`Question: ${number1} + ${number2} `);
 
-  for (let i = 0; i < 3; i++) {
-    const operation = Math.floor(Math.random() * 10);
-    const numb1 = Math.floor(Math.random() * 10);
-    const numb2 = Math.floor(Math.random() * 10);
-    if (operation == 1 || operation == 4 || operation == 7 || operation == 10) {
-      const sum = numb1 + numb2;
-      console.log(`Question: ${numb1} + ${numb2} `);
-      const answer = readlineSync.question('Your answer: ');
-      if (answer == sum) {
+      const answerStr = readlineSync.question('Enter answer:');
+      const answerNumber = parseInt(answerStr);
+
+      if (answerNumber === sum) {
         console.log('Correct!');
       } else {
-        console.log(`${answer} is wrong answer ;(. Correct answer was ${sum}.`);
+        console.log(`${answerNumber} is wrong answer ;(. Correct answer was ${sum}.`);
         console.log(`Let's try again, ${name}!`);
         break;
       }
     }
 
-    if (operation == 2 || operation == 5 || operation == 8) {
-      const sum = numb1 - numb2;
-      console.log(`Question: ${numb1} - ${numb2} `);
-      const answer = readlineSync.question('Your answer: ');
-      if (answer == sum) {
+    if (operationRand === 2 || operationRand === 5 || operationRand === 8) {
+      const sum = number1 - number2;
+      console.log(`Question: ${number1} - ${number2} `);
+
+      const answerStr = readlineSync.question('Enter answer:');
+      const answerNumber = parseInt(answerStr);
+
+      if (answerNumber === sum) {
         console.log('Correct!');
       } else {
-        console.log(`${answer} is wrong answer ;(. Correct answer was ${sum}.`);
+        console.log(`${answerNumber} is wrong answer ;(. Correct answer was ${sum}.`);
         console.log(`Let's try again, ${name}!`);
         break;
       }
     }
 
-    if (operation == 3 || operation == 6 || operation == 9) {
-      const sum = numb1 * numb2;
-      console.log(`Question: ${numb1} * ${numb2} `);
-      const answer = readlineSync.question('Your answer: ');
-      if (answer == sum) {
+    if (operationRand === 3 || operationRand === 6 || operationRand === 9) {
+      const sum = number1 * number2;
+      console.log(`Question: ${number1} * ${number2} `);
+
+      const answerStr = readlineSync.question('Enter answer:');
+      const answerNumber = parseInt(answerStr);
+
+      if (answerNumber === sum) {
         console.log('Correct!');
       } else {
-        console.log(`${answer} is wrong answer ;(. Correct answer was ${sum}.`);
+        console.log(`${answerNumber} is wrong answer ;(. Correct answer was ${sum}.`);
         console.log(`Let's try again, ${name}!`);
         break;
       }
-    } else if (i == 2) {
+    }
+
+    if (i === raunds - 1) {
       console.log(`Congratulations, ${name}!`);
     }
   }
