@@ -12,7 +12,7 @@ export default (name) => {
     const array = [];
 
     const stepStr = readlineSync.question('Enter step:');
-    const step = parseInt(stepStr, 35);
+    const step = parseInt(stepStr, 10);
 
     let value = 0;
     for (let i = 0; i < arrayLength; i += 1) {
@@ -26,7 +26,7 @@ export default (name) => {
     console.log(`${array[0]} ${array[1]} ${array[2]} ${array[3]} ${array[4]} ${array[5]} ${array[6]} ${array[7]} ${array[8]} ${array[9]}`);
 
     const answerStr = readlineSync.question('Enter answer:');
-    const answerNumber = parseInt(answerStr, 35);
+    const answerNumber = parseInt(answerStr, 10);
     if (answerNumber === answerValue) {
       console.log('Correct!');
     } else {

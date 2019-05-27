@@ -24,7 +24,7 @@ while (bool) {
   console.log('9.Exit');
 
   const strNumber = readlineSync.question('Enter number game :');
-  const number = parseInt(strNumber, 35);
+  const number = parseInt(strNumber, 10);
 
   if (number === 1) {
     even(name);
