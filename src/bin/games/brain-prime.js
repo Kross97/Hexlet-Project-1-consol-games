@@ -15,19 +15,24 @@ export default (name) => {
     }
     console.log(`Number=${number}`);
     const answer = readlineSync.question('You Answer: ');
-    if (idPrime === 0 && answer === 'yes') {
-      console.log('Correct!');
-    } else if (idPrime === 0 && answer !== 'yes') {
-      console.log(`${answer} is wrong answer ;(. Correct answer was yes.`);
-      console.log(`Let's try again, ${name}!`);
-      break;
+
+    if (idPrime === 0) {
+      if (answer === 'yes') {
+        console.log('Correct!');
+      } else if (answer !== 'yes') {
+        console.log(`${answer} is wrong answer ;(. Correct answer was yes.`);
+        console.log(`Let's try again, ${name}!`);
+        break;
+      }
     }
-    if (idPrime !== 0 && answer === 'no') {
-      console.log('Correct!');
-    } else if (idPrime !== 0 && answer !== 'no') {
-      console.log(`${answer} is wrong answer ;(. Correct answer was no.`);
-      console.log(`Let's try again, ${name}!`);
-      break;
+    if (idPrime !== 0) {
+      if (answer === 'no') {
+        console.log('Correct!');
+      } else if (answer !== 'no') {
+        console.log(`${answer} is wrong answer ;(. Correct answer was no.`);
+        console.log(`Let's try again, ${name}!`);
+        break;
+      }
     }
 
     if (j === raunds - 1) {

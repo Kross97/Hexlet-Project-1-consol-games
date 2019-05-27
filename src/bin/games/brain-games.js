@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-import welcome from '..';
 import readlineSync from 'readline-sync';
-import even from './games/brain-even';
-import calc from './games/brain-calc';
-import gcd from './games/brain-gcd';
-import prog from './games/brain-progression';
-import prime from './games/brain-prime';
+import welcome from '../..';
+import even from './brain-even';
+import calc from './brain-calc';
+import gcd from './brain-gcd';
+import prog from './brain-progression';
+import prime from './brain-prime';
 
 console.log('===========================');
 console.log('Welcome to the Brain Games!');

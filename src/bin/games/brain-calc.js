@@ -5,11 +5,14 @@ export default (name) => {
   console.log('=====================================');
   console.log('What is the result of the expression?');
   const raunds = 3;
+  
+  const arrOperation = ['+', '-', '*', '+', '-', '*', '+', '-', '*', '+'];
+
   for (let i = 0; i < raunds; i += 1) {
-    const operationRand = Math.floor(Math.random() * 10);
+    const operationIndex = Math.floor(Math.random() * 10);
     const number1 = Math.floor(Math.random() * 10);
     const number2 = Math.floor(Math.random() * 10);
-    if (operationRand === 1 || operationRand === 4 || operationRand === 7 || operationRand === 10) {
+    if (arrOperation[operationIndex] === '+') {
       const sum = number1 + number2;
       console.log(`Question: ${number1} + ${number2} `);
 
@@ -25,7 +28,7 @@ export default (name) => {
       }
     }
 
-    if (operationRand === 2 || operationRand === 5 || operationRand === 8) {
+    if (arrOperation[operationIndex] === '-') {
       const sum = number1 - number2;
       console.log(`Question: ${number1} - ${number2} `);
 
@@ -41,7 +44,7 @@ export default (name) => {
       }
     }
 
-    if (operationRand === 3 || operationRand === 6 || operationRand === 9) {
+    if (arrOperation[operationIndex] === '*') {
       const sum = number1 * number2;
       console.log(`Question: ${number1} * ${number2} `);
 
