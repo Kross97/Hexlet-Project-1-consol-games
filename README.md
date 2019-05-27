@@ -9,16 +9,14 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage">
 <img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
 
-ust : https://asciinema.org/a/q0W9rmS72Evcu1rHoQuWSgsQS
+Установка : https://asciinema.org/a/q0W9rmS72Evcu1rHoQuWSgsQS
 
-igr1 : https://asciinema.org/a/WVy24gpOY6SY4XdEdU78DpOfP
+brain-even : https://asciinema.org/a/WVy24gpOY6SY4XdEdU78DpOfP
 
+brain-calculyator : https://asciinema.org/a/S6aIa90paQqnAySqPefR5XYUl
 
-igr2 : https://asciinema.org/a/S6aIa90paQqnAySqPefR5XYUl
+brain-gcd :  https://asciinema.org/a/wjN4cOllSQTQnPx2xzt87KOLI
 
-igr3 :  https://asciinema.org/a/wjN4cOllSQTQnPx2xzt87KOLI
+brain-progression :  https://asciinema.org/a/xLvOXosYVN7GHjFhboVTf6kzy
 
-igr4 :  https://asciinema.org/a/xLvOXosYVN7GHjFhboVTf6kzy
-
-
-igr5: https://asciinema.org/a/IDPK5ogzROCoRnMLQAWT8E5SD
+brain-prime: https://asciinema.org/a/IDPK5ogzROCoRnMLQAWT8E5SD
