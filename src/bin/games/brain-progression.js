@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-
+import itog from './itog';
 
 export default (name) => {
   console.log('What number is missing in the progression?');
@@ -30,8 +30,7 @@ export default (name) => {
     if (answerNumber === answerValue) {
       console.log('Correct!');
     } else {
-      console.log(`${answerNumber} is wrong answer ;(. Correct answer was ${answerValue}.`);
-      console.log(`Let's try again, ${name}!`);
+      itog(answerNumber, answerValue, name);
       break;
     }
     if (j === raunds - 1) {

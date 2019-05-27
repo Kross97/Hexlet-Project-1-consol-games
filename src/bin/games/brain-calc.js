@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import itog from './itog';
 
 export default (name) => {
   console.log('=====================================');
@@ -35,8 +36,7 @@ export default (name) => {
     if (answerNumber === result) {
       console.log('Correct!');
     } else {
-      console.log(`${answerNumber} is wrong answer ;(. Correct answer was ${result}.`);
-      console.log(`Let's try again, ${name}!`);
+      itog(answerNumber, result, name);
       break;
     }
 

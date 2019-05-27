@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import itog from './itog';
 
 export default (name) => {
   console.log('==================================================');
@@ -23,8 +24,7 @@ export default (name) => {
     if (answerNumber === idGcd) {
       console.log('Correct!');
     } else {
-      console.log(`${answerNumber} is wrong answer ;(. Correct answer was ${idGcd}.`);
-      console.log(`Let's try again, ${name}!`);
+      itog(answerNumber, idGcd, name);
       break;
     }
     if (j === raunds - 1) {
