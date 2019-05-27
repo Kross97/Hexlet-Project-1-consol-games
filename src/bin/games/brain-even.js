@@ -15,7 +15,7 @@ export default (name) => {
     if (predicatValue === true) {
       console.log('Correct!');
     } else if (predicatValue === false) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${answer==='yes' ? 'no' : 'yes'}`);
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${answer === 'yes' ? 'no' : 'yes'}`);
       console.log(`Correct answer was Let's try again, ${name}!`);
       break;
     }

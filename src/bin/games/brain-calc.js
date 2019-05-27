@@ -31,7 +31,7 @@ export default (name) => {
     }
 
     const answerStr = readlineSync.question('Enter answer:');
-    const answerNumber = parseInt(answerStr);
+    const answerNumber = parseInt(answerStr, 36);
 
     if (answerNumber === result) {
       console.log('Correct!');
