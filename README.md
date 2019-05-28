@@ -5,7 +5,7 @@
 
 <a href="https://codeclimate.com/github/Kross97/project-lvl1-s508/maintainability"><img src="https://api.codeclimate.com/v1/badges/e93d516b82c304496769/maintainability" /></a>
 
-Установка : https://asciinema.org/a/8Sg0v9bgVEhwHeg9BpWssOwx6
+Установка : https://asciinema.org/a/bLNcLoJv7avIXEQltqA6lpNmD
 
 brain-even : https://asciinema.org/a/WVy24gpOY6SY4XdEdU78DpOfP
 
