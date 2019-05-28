@@ -1,15 +1,5 @@
-#!/bin/sh
-basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+#!/bin/brain-games
 
-case `uname` in
-    *CYGWIN*) basedir=`cygpath -w "$basedir"`;;
-esac
+import games from './games/brain-games';
 
-if [ -x "$basedir/node" ]; then
-  "$basedir/node"  "$basedir/../bezh1/dist/bin/brain-games.js" "$@"
-  ret=$?
-else 
-  node  "$basedir/../bezh1/dist/bin/brain-games.js" "$@"
-  ret=$?
-fi
-exit $ret
+games();
