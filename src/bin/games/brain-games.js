@@ -48,7 +48,7 @@ export default () => {
     }
     if (number === 9) {
       console.log('Good bye');
-      console.log('Exit games.....');
+      console.log('Exit games....');
       break;
     }
   }
