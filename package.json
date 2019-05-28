@@ -28,14 +28,12 @@
     "games",
     "progression"
   ],
-
   "author": "Nikita Bezhenar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Kross97/project-lvl1-s508/issues"
   },
   "homepage": "https://github.com/Kross97/project-lvl1-s508#readme",
-
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
@@ -52,7 +50,6 @@
     "eslint-plugin-jest": "^22.5.1",
     "eslint-plugin-lodash-fp": "^2.2.0-a1"
   },
-
   "dependencies": {
     "readline-sync": "^1.4.9"
   }
