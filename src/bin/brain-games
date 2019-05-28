@@ -1,4 +1,4 @@
-#!/bin/brain-games 
+#!/bin/env node 
 
 import games from './games/brain-games';
 
