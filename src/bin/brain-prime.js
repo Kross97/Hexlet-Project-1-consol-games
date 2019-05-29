@@ -1,4 +1,4 @@
 #!/bin/env node
-import games from '../games/brain-games';
+import prime from '../games/brain-prime';
 
-games(5);
+prime();

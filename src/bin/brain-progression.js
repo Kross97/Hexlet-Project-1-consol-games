@@ -1,5 +1,5 @@
 #!/bin/env node
 
-import games from '../games/brain-games';
+import prog from '../games/brain-progression';
 
-games(4);
+prog();
