@@ -1,6 +1,6 @@
 {
-  "name": "bezh1",
-  "version": "2.5.4",
+  "name": "bezh2",
+  "version": "3.5.4",
   "description": "Brain-games , math games",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
