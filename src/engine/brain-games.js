@@ -1,38 +1,25 @@
 import readlineSync from 'readline-sync';
-import welcome from './index';
 
+export const rounds = 3;
 
-export default (gameText, questions, results, typeAnswer) => {
+export const engine = (conditionGame, gameData) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
-  welcome(name);
-  console.log(gameText);
-  const raunds = 3;
-  for (let i = 0; i < raunds; i += 1) {
-    console.log(questions[i]);
+  console.log(`Hello , ${name}`);
+  console.log(conditionGame);
 
-    let answer;
+  for (let i = 0; i < rounds; i += 1) {
+    console.log(gameData[i][0]);
 
-    // Answer Type Number or Text
-    if (typeAnswer === 'number') {
-      const answerStr = readlineSync.question('Enter answer:');
-      answer = parseInt(answerStr, 10);
-    } else if (typeAnswer === 'text') {
-      answer = readlineSync.question('Enter answer:');
-    }
+    const answer = readlineSync.question('Enter answer:');
 
-    if (answer === results[i]) {
+    if (answer === gameData[i][1]) {
       console.log('Correct!');
-    }
-
-    if (answer !== results[i]) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${results[i]}`);
+    } else {
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${gameData[i][1]}`);
       console.log(`Correct answer was Let's try again, ${name}!`);
-      break;
-    }
-
-    if (i === raunds - 1) {
-      console.log(`Congratulations, ${name}!`);
+      return;
     }
   }
+  console.log(`Congratulations, ${name}!`);
 };
