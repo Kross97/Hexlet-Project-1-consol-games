@@ -1,29 +1,33 @@
 
-import engine from '../engine/brain-games';
+import { rounds, engine } from '../engine/brain-games';
+import random from '../engine/random';
+
 
 export default () => {
-  const gameText = 'What number is missing in the progression?';
-  const questionsArray = [];
-  const resultArray = [];
-  const typeAnswer = 'number';
+  const conditionGame = 'What number is missing in the progression?';
+  const gameData = [];
 
-  const raunds = 3;
-  const arrayLength = 10;
+  const intervalRandom = 100;
+  const intervalRandom2 = 10;
 
-  for (let j = 0; j < raunds; j += 1) {
-    const array = [];
-    const step = Math.floor(Math.random() * 100);
+  const lengthArr = 10;
+
+  for (let i = 0; i < rounds; i += 1) {
+    const elementData = [];
+    const numbersGame = [];
+    const step = random(intervalRandom);
 
     let value = 0;
-    for (let i = 0; i < arrayLength; i += 1) {
+    for (let j = 0; j < lengthArr; j += 1) {
       value += step;
-      array[i] = value;
+      numbersGame[j] = value;
     }
-    const elementSecret = Math.floor(Math.random() * 10);
-    resultArray[j] = array[elementSecret];
-    array[elementSecret] = '...';
+    const elementSecret = random(intervalRandom2);
+    elementData[1] = `${numbersGame[elementSecret]}`;
+    numbersGame[elementSecret] = '...';
 
-    questionsArray[j] = `${array[0]} ${array[1]} ${array[2]} ${array[3]} ${array[4]} ${array[5]} ${array[6]} ${array[7]} ${array[8]} ${array[9]}`;
+    elementData[0] = `${numbersGame.map(element => element)}`;
+    gameData[i] = elementData;
   }
-  engine(gameText, questionsArray, resultArray, typeAnswer);
+  engine(conditionGame, gameData);
 };

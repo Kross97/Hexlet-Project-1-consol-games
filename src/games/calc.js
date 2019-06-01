@@ -1,37 +1,38 @@
 
-import engine from '../engine/brain-games';
+import { rounds, engine } from '../engine/brain-games';
+import random from '../engine/random';
 
+const operations = ['+', '-', '*'];
 
 export default () => {
-  const gameText = 'What is the result of the expression?';
-  const questionsArray = [];
-  const resultArray = [];
-  const typeAnswer = 'number';
-  const arrOperation = ['+', '-', '*', '+', '-', '*', '+', '-', '*', '+'];
-  const raunds = 3;
+  const conditionGame = 'What is the result of the expression?';
+  const gameData = [];
 
-  for (let i = 0; i < raunds; i += 1) {
-    const operationIndex = Math.floor(Math.random() * 10);
-    const number1 = Math.floor(Math.random() * 10);
-    const number2 = Math.floor(Math.random() * 10);
+  const intervalRandom = 10;
+  const intervalRandom2 = 3;
 
-    questionsArray[i] = `Question: ${number1} ${arrOperation[operationIndex]} ${number2} `;
+  for (let i = 0; i < rounds; i += 1) {
+    const elementData = [];
+    const operationIndex = random(intervalRandom2);
+    const numeral1 = random(intervalRandom);
+    const numeral2 = random(intervalRandom);
+
+    elementData[0] = `Question: ${numeral1} ${operations[operationIndex]} ${numeral2}`;
 
     let result = 0;
 
-    if (arrOperation[operationIndex] === '+') {
-      result = number1 + number2;
-    }
+    switch (operations[operationIndex]) {
+      case '+':
+        result = numeral1 + numeral2; break;
 
-    if (arrOperation[operationIndex] === '-') {
-      result = number1 - number2;
-    }
+      case '-':
+        result = numeral1 - numeral2; break;
 
-    if (arrOperation[operationIndex] === '*') {
-      result = number1 * number2;
+      default:
+        result = numeral1 * numeral2; break;
     }
-    resultArray[i] = result;
+    elementData[1] = `${result}`;
+    gameData[i] = elementData;
   }
-
-  engine(gameText, questionsArray, resultArray, typeAnswer);
+  engine(conditionGame, gameData);
 };

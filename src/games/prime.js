@@ -1,33 +1,28 @@
 
-import engine from '../engine/brain-games';
+import { rounds, engine } from '../engine/brain-games';
+import random from '../engine/random';
+import { predicatPrime } from '../engine/predicats';
 
 export default () => {
-  const gameText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const questionsArray = [];
-  const resultsArray = [];
-  const typeAnswer = 'text';
+  const conditionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const gameData = [];
+  const intervalRandom = 10;
 
-  const raunds = 3;
-
-  for (let j = 0; j < raunds; j += 1) {
-    const number = Math.floor(Math.random() * 10) + 1;
-    let idPrime = 0;
-
-    for (let i = 2; i < number; i += 1) {
-      if (number % i === 0) {
-        idPrime = i;
-      }
-    }
-
-    questionsArray[j] = `${number}`;
+  for (let i = 0; i < rounds; i += 1) {
+    const elementData = [];
+    const numeral = random(intervalRandom);
 
 
-    if (idPrime !== 0 || number === 1) {
-      resultsArray[j] = 'no';
+    elementData[0] = `${numeral}`;
+
+
+    if (predicatPrime(numeral)) {
+      elementData[1] = 'yes';
     } else {
-      resultsArray[j] = 'yes';
+      elementData[1] = 'no';
     }
+    gameData[i] = elementData;
   }
 
-  engine(gameText, questionsArray, resultsArray, typeAnswer);
+  engine(conditionGame, gameData);
 };
