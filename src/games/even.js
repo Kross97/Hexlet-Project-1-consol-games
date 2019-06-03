@@ -2,7 +2,6 @@ import { rounds, engine } from '../engine/brain-games';
 import { predicatEven } from '../engine/predicats';
 import random from '../engine/random';
 
-
 export default () => {
   const conditionGame = 'Answer "yes" if number even otherwise answer "no".';
   const gameData = [];
