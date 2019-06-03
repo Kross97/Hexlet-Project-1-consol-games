@@ -12,9 +12,7 @@ export default () => {
     const elementData = [];
     const numeral = random(intervalRandom);
 
-
     elementData[0] = `${numeral}`;
-
 
     if (predicatPrime(numeral)) {
       elementData[1] = 'yes';
