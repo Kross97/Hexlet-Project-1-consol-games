@@ -7,7 +7,6 @@ const operations = ['+', '-', '*'];
 export default () => {
   const conditionGame = 'What is the result of the expression?';
   const gameData = [];
-
   const intervalRandom = 10;
   const intervalRandom2 = 3;
 
