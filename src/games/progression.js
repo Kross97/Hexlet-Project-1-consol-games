@@ -1,30 +1,29 @@
+import { roundsCount, engine } from '../engine';
+import random from '../addition/random';
 
-import { rounds, engine } from '../engine/brain-games';
-import random from '../engine/random';
+const taskGame = 'What number is missing in the progression?';
 
 export default () => {
-  const conditionGame = 'What number is missing in the progression?';
   const gameData = [];
   const intervalRandom = 100;
   const intervalRandom2 = 10;
-  const lengthArr = 10;
 
-  for (let i = 0; i < rounds; i += 1) {
-    const elementData = [];
-    const numbersGame = [];
+  for (let i = 0; i < roundsCount; i += 1) {
+    const numbers = [];
     const step = random(intervalRandom);
 
+    const numbersCount = 10;
     let value = 0;
-    for (let j = 0; j < lengthArr; j += 1) {
+    for (let j = 0; j < numbersCount; j += 1) {
       value += step;
-      numbersGame[j] = value;
+      numbers[j] = value;
     }
-    const elementSecret = random(intervalRandom2);
-    elementData[1] = `${numbersGame[elementSecret]}`;
-    numbersGame[elementSecret] = '...';
+    const secretIndex = random(intervalRandom2);
+    const expectedAnswer = `${numbers[secretIndex]}`;
+    numbers[secretIndex] = '...';
 
-    elementData[0] = `${numbersGame.map(element => element)}`;
-    gameData[i] = elementData;
+    const questionRound = `${numbers.join()}`;
+    gameData[i] = [questionRound, expectedAnswer];
   }
-  engine(conditionGame, gameData);
+  engine(taskGame, gameData);
 };
