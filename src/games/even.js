@@ -16,10 +16,9 @@ export default () => {
   const gameData = [];
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const question = random(minValueRandom, maxValueRandom);
-    const answerGame = isEven(question) ? 'yes' : 'no';
-    const questionGame = question.toString();
-    gameData[i] = [questionGame, answerGame];
+    const questionGame = random(minValueRandom, maxValueRandom);
+    const answerGame = isEven(questionGame) ? 'yes' : 'no';
+    gameData[i] = [questionGame.toString(), answerGame];
   }
   engine(taskGame, gameData);
 };
