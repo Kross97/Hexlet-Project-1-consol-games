@@ -3,37 +3,36 @@ import random from '../addition/random';
 
 const operations = ['+', '-', '*'];
 const taskGame = 'What is the result of the expression?';
+const maxValueRandom = 10;
+const minValueRandom = 0;
+const operationsCount = operations.length();
 
 export default () => {
   const gameData = [];
 
-  const intervalRandom = 10;
-  const intervalRandom2 = 3;
-
   for (let i = 0; i < roundsCount; i += 1) {
-    const operationIndex = random(intervalRandom2);
-    const roundValue1 = random(intervalRandom);
-    const roundValue2 = random(intervalRandom);
+    const operationIndex = random(minValueRandom, operationsCount);
+    const question1 = random(minValueRandom, maxValueRandom);
+    const question2 = random(minValueRandom, maxValueRandom);
 
-    const questionRound = ` ${roundValue1} ${operations[operationIndex]} ${roundValue2}`;
+    const questionGame = ` ${question1} ${operations[operationIndex]} ${question2}`;
 
-    let result;
+    let answerGame;
 
     switch (operations[operationIndex]) {
       case '+':
-        result = roundValue1 + roundValue2;
+        answerGame = question1 + question2;
         break;
 
       case '-':
-        result = roundValue1 - roundValue2;
+        answerGame = question1 - question2;
         break;
 
       default:
-        result = roundValue1 * roundValue2;
+        answerGame = question1 * question2;
         break;
     }
-    const expectedAnswer = `${result}`;
-    gameData[i] = [questionRound, expectedAnswer];
+    gameData[i] = [questionGame, answerGame.toString()];
   }
   engine(taskGame, gameData);
 };
