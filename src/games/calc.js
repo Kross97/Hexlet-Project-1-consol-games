@@ -1,38 +1,38 @@
-
-import { rounds, engine } from '../engine/brain-games';
-import random from '../engine/random';
+import { roundsCount, engine } from '../engine';
+import random from '../addition/random';
 
 const operations = ['+', '-', '*'];
+const taskGame = 'What is the result of the expression?';
+const maxValueRandom = 10;
+const minValueRandom = 0;
+const operationsCount = operations.length();
 
 export default () => {
-  const conditionGame = 'What is the result of the expression?';
   const gameData = [];
 
-  const intervalRandom = 10;
-  const intervalRandom2 = 3;
+  for (let i = 0; i < roundsCount; i += 1) {
+    const operationIndex = random(minValueRandom, operationsCount);
+    const question1 = random(minValueRandom, maxValueRandom);
+    const question2 = random(minValueRandom, maxValueRandom);
 
-  for (let i = 0; i < rounds; i += 1) {
-    const elementData = [];
-    const operationIndex = random(intervalRandom2);
-    const numeral1 = random(intervalRandom);
-    const numeral2 = random(intervalRandom);
+    const questionGame = ` ${question1} ${operations[operationIndex]} ${question2}`;
 
-    elementData[0] = `Question: ${numeral1} ${operations[operationIndex]} ${numeral2}`;
-
-    let result = 0;
+    let answerGame;
 
     switch (operations[operationIndex]) {
       case '+':
-        result = numeral1 + numeral2; break;
+        answerGame = question1 + question2;
+        break;
 
       case '-':
-        result = numeral1 - numeral2; break;
+        answerGame = question1 - question2;
+        break;
 
       default:
-        result = numeral1 * numeral2; break;
+        answerGame = question1 * question2;
+        break;
     }
-    elementData[1] = `${result}`;
-    gameData[i] = elementData;
+    gameData[i] = [questionGame, answerGame.toString()];
   }
-  engine(conditionGame, gameData);
+  engine(taskGame, gameData);
 };

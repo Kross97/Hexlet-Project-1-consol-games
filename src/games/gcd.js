@@ -1,23 +1,28 @@
+import { roundsCount, engine } from '../engine';
+import random from '../addition/random';
 
-import { rounds, engine } from '../engine/brain-games';
-import random from '../engine/random';
-import searchGcd from '../engine/searchGcd';
+const taskGame = 'Find the greatest common divisor of given numbers.';
+const maxValueRandom = 100;
+const minValueRandom = 1;
+
+const searchGcd = (question1, question2) => {
+  if (question2 === 0) {
+    return question1;
+  }
+  return searchGcd(question2, question1 % question2);
+};
 
 export default () => {
-  const conditionGame = 'Find the greatest common divisor of given numbers.';
   const gameData = [];
-  const intervalRandom = 100;
 
-  for (let i = 0; i < rounds; i += 1) {
-    const elementData = [];
-    const numeral1 = random(intervalRandom);
-    const numeral2 = random(intervalRandom);
+  for (let i = 0; i < roundsCount; i += 1) {
+    const question1 = random(minValueRandom, maxValueRandom);
+    const question2 = random(minValueRandom, maxValueRandom);
 
-    const idGcd = searchGcd(numeral1, numeral2);
+    const answerGame = searchGcd(question1, question2);
 
-    elementData[1] = `${idGcd}`;
-    elementData[0] = `Question:${numeral1} ${numeral2} `;
-    gameData[i] = elementData;
+    const questionGame = `${question1} ${question2}`;
+    gameData[i] = [questionGame, answerGame.toString()];
   }
-  engine(conditionGame, gameData);
+  engine(taskGame, gameData);
 };

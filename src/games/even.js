@@ -1,26 +1,24 @@
-import { rounds, engine } from '../engine/brain-games';
-import { predicatEven } from '../engine/predicats';
-import random from '../engine/random';
+import { roundsCount, engine } from '../engine';
+import random from '../addition/random';
 
+const taskGame = 'Answer "yes" if number even otherwise answer "no".';
+const maxValueRandom = 100;
+const minValueRandom = 1;
+
+const isEven = (number) => {
+  if (number % 2 === 0) {
+    return true;
+  }
+  return false;
+};
 
 export default () => {
-  const conditionGame = 'Answer "yes" if number even otherwise answer "no".';
   const gameData = [];
-  const intervalRandom = 100;
 
-  for (let i = 0; i < rounds; i += 1) {
-    const elementData = [];
-    const numeral = random(intervalRandom);
-
-    if (predicatEven(numeral, 2)) {
-      elementData[1] = 'yes';
-    } else {
-      elementData[1] = 'no';
-    }
-
-    elementData[0] = `Question:${numeral}`;
-    gameData[i] = elementData;
+  for (let i = 0; i < roundsCount; i += 1) {
+    const questionGame = random(minValueRandom, maxValueRandom);
+    const answerGame = isEven(questionGame) ? 'yes' : 'no';
+    gameData[i] = [questionGame.toString(), answerGame];
   }
-
-  engine(conditionGame, gameData);
+  engine(taskGame, gameData);
 };
