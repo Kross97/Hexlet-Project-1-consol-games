@@ -5,12 +5,12 @@ const taskGame = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 const maxValueRandom = 100;
 const minValueRandom = 2;
 
-const isPrime = (questionGame) => {
-  if (questionGame < 0) {
+const isPrime = (question) => {
+  if (question < 0) {
     return false;
   }
-  for (let i = 2; i < questionGame / 2; i += 1) {
-    if (questionGame % i === 0) {
+  for (let i = 2; i < question / 2; i += 1) {
+    if (question % i === 0) {
       return false;
     }
   }
