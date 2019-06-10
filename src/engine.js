@@ -9,15 +9,15 @@ export const engine = (taskGame, gameData) => {
   console.log(taskGame);
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const [questionRound, expectedAnswer] = gameData[i];
-    console.log(`Question:${questionRound}`);
+    const [question, rigthAnswer] = gameData[i];
+    console.log(`Question: ${question}`);
 
-    const answer = readlineSync.question('Enter answer:');
+    const answer = readlineSync.question('Enter answer: ');
 
-    if (answer === expectedAnswer) {
+    if (answer === rigthAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${expectedAnswer}`);
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${rigthAnswer}`);
       console.log(`Correct answer was Let's try again, ${name}!`);
       return;
     }
