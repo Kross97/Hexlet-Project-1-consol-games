@@ -8,30 +8,24 @@ const minValueRandom = 0;
 
 export default () => {
   const gameData = [];
-
   for (let i = 0; i < roundsCount; i += 1) {
-    const operationIndex = random(minValueRandom, operations.length);
-    const question1 = random(minValueRandom, maxValueRandom);
-    const question2 = random(minValueRandom, maxValueRandom);
-
-    const questionGame = ` ${question1} ${operations[operationIndex]} ${question2}`;
-
-    let answerGame;
-
+    const operationIndex = random(minValueRandom, operations.length - 1);
+    const a = random(minValueRandom, maxValueRandom);
+    const b = random(minValueRandom, maxValueRandom);
+    const question = ` ${a} ${operations[operationIndex]} ${b}`;
+    let answer;
     switch (operations[operationIndex]) {
       case '+':
-        answerGame = question1 + question2;
+        answer = a + b;
         break;
-
       case '-':
-        answerGame = question1 - question2;
+        answer = a - b;
         break;
-
       default:
-        answerGame = question1 * question2;
+        answer = a * b;
         break;
     }
-    gameData[i] = [questionGame, answerGame.toString()];
+    gameData[i] = [question, answer.toString()];
   }
   engine(taskGame, gameData);
 };

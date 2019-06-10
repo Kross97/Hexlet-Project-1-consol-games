@@ -3,27 +3,28 @@ import random from '../addition/random';
 
 const taskGame = 'What number is missing in the progression?';
 const maxValueRandom = 100;
-const minValueRandom = 0;
+const minValueRandom = 1;
 const progressionLength = 10;
+
+const createProgression = (stepProgression) => {
+  const progression = [];
+  for (let i = 0; i < progressionLength; i += 1) {
+    const elementValue = stepProgression + stepProgression * i;
+    progression[i] = elementValue;
+  }
+  return progression;
+};
 
 export default () => {
   const gameData = [];
-
   for (let i = 0; i < roundsCount; i += 1) {
-    const progression = [];
-    const step = random(minValueRandom, maxValueRandom);
-
-    let value = 0;
-    for (let j = 0; j < progressionLength; j += 1) {
-      value += step;
-      progression[j] = value;
-    }
-    const secretIndex = random(minValueRandom, progressionLength);
-    const answerGame = progression[secretIndex];
+    const startValue = random(minValueRandom, maxValueRandom);
+    const progression = createProgression(startValue);
+    const secretIndex = random(minValueRandom, progressionLength - 1);
+    const answer = progression[secretIndex];
     progression[secretIndex] = '...';
-
-    const questionGame = progression.join();
-    gameData[i] = [questionGame, answerGame.toString()];
+    const question = progression.join();
+    gameData[i] = [question, answer.toString()];
   }
   engine(taskGame, gameData);
 };

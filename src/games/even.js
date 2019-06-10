@@ -6,19 +6,16 @@ const maxValueRandom = 100;
 const minValueRandom = 1;
 
 const isEven = (number) => {
-  if (number % 2 === 0) {
-    return true;
-  }
-  return false;
+  const result = number % 2 === 0;
+  return result;
 };
 
 export default () => {
   const gameData = [];
-
   for (let i = 0; i < roundsCount; i += 1) {
-    const questionGame = random(minValueRandom, maxValueRandom);
-    const answerGame = isEven(questionGame) ? 'yes' : 'no';
-    gameData[i] = [questionGame.toString(), answerGame];
+    const question = random(minValueRandom, maxValueRandom);
+    const answer = isEven(question) ? 'yes' : 'no';
+    gameData[i] = [question.toString(), answer];
   }
   engine(taskGame, gameData);
 };
