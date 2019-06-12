@@ -6,10 +6,12 @@ const maxValueRandom = 100;
 const minValueRandom = 1;
 const progressionLength = 10;
 
-const createProgression = (stepProgression) => {
+const createProgression = () => {
   const progression = [];
+  const startValue = random(minValueRandom, maxValueRandom);
+  const stepProgression = random(minValueRandom, maxValueRandom);
   for (let i = 0; i < progressionLength; i += 1) {
-    const elementValue = stepProgression + stepProgression * i;
+    const elementValue = startValue + stepProgression * i;
     progression[i] = elementValue;
   }
   return progression;
@@ -18,8 +20,7 @@ const createProgression = (stepProgression) => {
 export default () => {
   const gameData = [];
   for (let i = 0; i < roundsCount; i += 1) {
-    const startValue = random(minValueRandom, maxValueRandom);
-    const progression = createProgression(startValue);
+    const progression = createProgression();
     const secretIndex = random(minValueRandom, progressionLength - 1);
     const answer = progression[secretIndex];
     progression[secretIndex] = '...';

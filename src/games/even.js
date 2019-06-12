@@ -5,10 +5,7 @@ const taskGame = 'Answer "yes" if number even otherwise answer "no".';
 const maxValueRandom = 100;
 const minValueRandom = 1;
 
-const isEven = (number) => {
-  const result = number % 2 === 0;
-  return result;
-};
+const isEven = number => number % 2 === 0;
 
 export default () => {
   const gameData = [];

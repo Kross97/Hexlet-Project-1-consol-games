@@ -9,12 +9,12 @@ const minValueRandom = 0;
 export default () => {
   const gameData = [];
   for (let i = 0; i < roundsCount; i += 1) {
-    const operationIndex = random(minValueRandom, operations.length - 1);
+    const indexOperation = random(minValueRandom, operations.length - 1);
     const a = random(minValueRandom, maxValueRandom);
     const b = random(minValueRandom, maxValueRandom);
-    const question = ` ${a} ${operations[operationIndex]} ${b}`;
+    const question = ` ${a} ${operations[indexOperation]} ${b}`;
     let answer;
-    switch (operations[operationIndex]) {
+    switch (operations[indexOperation]) {
       case '+':
         answer = a + b;
         break;
