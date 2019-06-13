@@ -20,9 +20,8 @@ const isPrime = (number) => {
 export default () => {
   const gameData = [];
   for (let i = 0; i < roundsCount; i += 1) {
-    const a = random(minValueRandom, maxValueRandom);
-    const answer = isPrime(a) ? 'yes' : 'no';
-    const question = a.toString();
+    const question = random(minValueRandom, maxValueRandom);
+    const answer = isPrime(question) ? 'yes' : 'no';
     gameData[i] = [question, answer];
   }
   engine(taskGame, gameData);

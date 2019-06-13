@@ -5,11 +5,11 @@ const taskGame = 'Find the greatest common divisor of given numbers.';
 const maxValueRandom = 100;
 const minValueRandom = 1;
 
-const searchGcd = (number1, number2) => {
-  if (number2 === 0) {
-    return number1;
+const searchGcd = (a, b) => {
+  if (b === 0) {
+    return a;
   }
-  return searchGcd(number2, number1 % number2);
+  return searchGcd(b, a % b);
 };
 
 export default () => {
